@@ -9,6 +9,10 @@ const tableRaw = ({ name, surname, phone }) => `
     <td>${phone.value}</td>
 `;
 
+const isFormValid = (form) => keys.every((key) => !!form[key].valid);
+
+form.addEventListener("submit", submittingForm);
+
 const notEmpty = (name, value) => {
     if (!value) {
         alert(`${name} is Required`);
@@ -32,8 +36,6 @@ const formValidation = {
     surname: notEmpty,
     phone: (name, value) => notEmpty(name, value) && isNumber(name, value)
 };
-
-const isFormValid = (form) => keys.every((key) => !!form[key].valid);
 
 function submittingForm(event) {
     event.preventDefault();
@@ -62,5 +64,3 @@ function submittingForm(event) {
     newRow.innerHTML = tableRaw(data);
     table.appendChild(newRow);
 }
-
-form.addEventListener("submit", submittingForm);

@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.form {
+    display: grid;
+    gap: 20px;
+    margin: 20px;
+
+}
+.list {
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    margin-bottom: 10px;
+    justify-items: center;
+}
+
+.questionnaire {
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    justify-items: center;
+}
+#table {
+    margin-left: 100px;
+
+}
+.table_styles {
+    width: 200px;
+
+}
